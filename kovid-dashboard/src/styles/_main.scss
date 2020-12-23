@@ -1,0 +1,317 @@
+* {
+    font-size: $font-size;
+    font-family: $font-family;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: $background-color;
+    color: $font-color;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    
+    height: 4em;
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: $background-block;
+    border: 2px solid $border-color;
+    box-sizing: content-box;
+  }
+
+  h1 {
+    
+    max-width: 90vw;
+    margin: 0;
+    text-align: left;
+  }
+
+  .wrapper {
+    margin-top: 10px;
+    display: flex;
+    height: 80vh;
+    min-height: 680px;
+    align-items: stretch;
+    gap: .5em;
+  }
+
+  .global_cases {
+    text-align: center;
+  }
+
+  .global_cases>div {
+    text-align: center;
+    color: rgb(230, 0, 0);
+    stroke-width: 2;
+    font-size: 3em;
+    line-height: normal
+  }
+
+  .left_page{
+    min-width: 300px;
+    max-width: 300px;
+    height: 80vh;
+    min-height: 680px;
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+  }
+
+  .center_page {
+    flex: auto;
+  }
+
+  .right_page{
+    min-width: 400px;
+    height: 80vh;
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+  }
+
+  .global_cases{
+    height: 5em;
+    background-color: $background-block;
+  }
+
+  .country_list {
+    height: 100%;
+    background-color: $background-block;
+    position: relative;
+  }
+
+  .map {
+    overflow: hidden;
+    width: calc(100vw - 740px);
+    height: 100%;
+    background-color: $background-block;
+  }
+  .legend_map {
+    width: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1px;
+    font-size: 12px;
+    font-weight: 900;
+    color: black;
+    background-color: white;
+  }
+  .legend_map>div {
+    text-align: center;
+  }
+  .force {
+    font-size: 12px;
+    font-weight: 900;
+    width: 100px;
+
+  }
+  .force_100 {
+    font-size: 12px;
+    font-weight: 900;
+    color:white;
+    background-color: rgb(255, 0, 0);
+    width: 100px;
+  }
+  .force_80 {
+    font-size: 12px;
+    font-weight: 900;
+    color:white;
+    background-color: rgb(255, 20, 0);
+    width: 100px;
+  }
+  .force_60 {
+    font-size: 12px;
+    font-weight: 900;
+    color:white;
+    background-color: rgb(255, 60, 0);
+    width: 100px;
+  }
+  .force_40 {
+    font-size: 12px;
+    font-weight: 900;
+    color:white;
+    background-color: rgb(208, 100, 0);
+    width: 100px;
+  }
+  .force_20 {
+    font-size: 12px;
+    font-weight: 900;
+    color:white;
+    background-color: rgb(255, 150, 0);
+    width: 100px;
+  }
+
+  .statistic {
+    position: relative;
+    min-width: 400px;
+    height: 45%;
+    background-color: $background-block;
+  }
+
+  .diagram {
+    min-width: 300px;
+    height: 55%;
+    position: relative;
+    background-color: $background-color;
+  }
+
+  .footer {
+    height: 77px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: .5em;
+    flex: 0 0 auto;ж
+
+
+    &__school {
+      
+
+      & a {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      & a:hover {
+        opacity: .9;
+      }
+
+      & svg {
+        height: 2rem;
+        margin-right: 1rem;
+        transition: .3s;
+      }
+    }
+  }
+
+  .author {
+    padding: 1rem;
+
+    &__container {
+      display: flex;
+    }
+
+    & svg {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 1rem;
+      transition: .3s;
+      cursor: pointer;
+
+      & path {
+        fill: #fff;
+      }
+    }
+
+    & a {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    & a:hover {
+      opacity: .9;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    body {
+    }
+
+    .wrapper {
+      height: calc(82vh * 2);
+      flex-wrap: wrap;
+    }
+
+    .center_page {
+      order: 1;
+    }
+
+    .right_page{
+      width: calc(100vw - 281px - 3em);
+    }
+
+    .map {
+      min-width: calc(100vw - 1em);
+    }
+
+    .chart__container {
+      min-height: 240px;
+    }
+  }
+
+  @media (max-width: 730px) {
+    body {
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: calc(82vh*3);
+      min-height: 2040px ;
+    }
+    .global_cases {
+      width: 96vw;
+      min-width: 320px;
+    }
+    .country_list {
+      width: 96vw;
+      min-width: 320px;
+    }
+
+    .left_page{
+      min-width: 320px;
+      width: 100%
+
+    }
+
+    .center_page {
+      min-width: 320px;
+      width: 100%;
+      order: 1;
+    }
+
+    .right_page{
+      min-width: 320px;
+      width: 100% 
+    }
+    
+
+    .map {
+      width: 100%;
+      min-width: 320px;
+      height: 80vh;
+
+    }
+  }
+
+.hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 4px;
+  
+}
+.hint>div {
+  font-size: 12px;
+  font-weight: 900;
+}
